@@ -1,5 +1,7 @@
 # Echo Ark
 
+> **[Full documentation](https://outlayer.fastnear.com/docs/examples#echo-ark)** on the OutLayer dashboard.
+
 A simple WASI example that echoes back the input message with NEAR context information.
 
 ## What it does
