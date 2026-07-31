@@ -33,7 +33,7 @@ This example demonstrates how to:
 cargo build --target wasm32-wasip1 --release
 ```
 
-The compiled WASM will be at: `target/wasm32-wasip1/release/echo-ark.wasm`
+The compiled WASM will be at: `target/wasm32-wasip1/release/echo-example.wasm`
 
 ## Testing Locally
 
