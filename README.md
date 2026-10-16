@@ -47,12 +47,15 @@ echo '{"message":"Hello, NEAR!"}' | cargo run
 
 ## Using with NEAR OutLayer
 
-Deploy and call via the dashboard:
-1. Push this code to GitHub
-2. In the dashboard, set:
-   - **Repository**: `https://github.com/your-username/your-repo`
-   - **Commit**: `main` (or specific commit hash)
-   - **Build Target**: `wasm32-wasip1`
+Publish the build and deploy it as a project:
+```bash
+outlayer upload target/wasm32-wasip1/release/echo-example.wasm
+# prints SHA256 and: FastFS URL: https://main.fastfs.io/<you>/outlayer.near/<sha256>.wasm
+outlayer deploy echo-example <FastFS URL>
+```
+
+Or in the dashboard: **Projects** → **Create Project** with the WASM URL and its SHA256. Then call it with:
+   - **Source**: `{"Project": {"project_id": "<you>/echo-example", "version_key": null}}`
    - **Response Format**: `Json`
    - **Input Data**: `{"message":"Hello from the blockchain!"}`
 
